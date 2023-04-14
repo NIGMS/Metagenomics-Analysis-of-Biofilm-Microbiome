@@ -1,0 +1,75 @@
+[
+    {
+        "question": "Why do we need to do Microbiome Community Analysis (Select ALL that apply)?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Because microbes organize in a community to respond to their environment, just like humans",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "To identify quorum sensing and quorum quenching marker genes or proteins",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "It's the same as biomarker discovery.",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "none of the above",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What tools and data do we need for microbiome community analysis (Select ALL that apply)?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Blast+",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Quorum Sensing Database",
+                "correct": true,
+                "feedback": "Correct."
+            },
+             {
+                "answer": "Qiime2",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What is the importance of STRINGDB in our microbiome community analysis?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Identify from our sample biomarker, any relevant protein across species that may relate to the quorum sensing function.",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "Modeling our data for prediction",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "No need in this case",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "None of the above",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "question": "Microbiome Analysis objective is to (select ALL that apply):",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Characterize the taxonomic diversity of the communities",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "Identify the alpha and beta diversity landscape of the sample",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Run Mothur to check the dataset quality",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "None of the above",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What tools can I use for Microbiome analysis?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Qiime",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "Trimmomatic",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "Blast",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Dockerized workflow approach provides a highly reproducible analysis result",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "No",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "Yes",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "Qiime2 is used in metagenomics to (select ALL that apply):",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Analyze the taxonomy diversity of the microbiome community in the sample",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Remove bad sequences from the dataset following the fastQC report",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Reduce the dataset size if we have a big file.",
+                "correct": false,
+                "feedback": "incorrect."
+            }
+        ]
+    }
+]
