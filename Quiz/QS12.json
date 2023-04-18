@@ -1,0 +1,81 @@
+[ 
+    {
+        "question": "GCP stand for:",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Google Cloud Platform",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Good Computing Practice",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Cloud-based approach provides easy access to suitable computational capabilities.",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "No",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "Yes",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "In Microbiobe metagenomics, Raw data Quality Control can be done using (select ALL that apply):",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "FastQC",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "Trimmomatic",
+                "correct": true,
+                "feedback": "False."
+            },
+            {
+                "answer": "MultiQC",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Mothur",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Trimmomatic is used in metagenomics to:",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "improve the sequence data quality",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "Removing bad sequence from the dataset following the fastQC report",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Reducing the dataset size if we have a big file.",
+                "correct": false,
+                "feedback": "incorrect."
+            }
+        ]
+    }
+]

@@ -1,0 +1,129 @@
+[
+    {
+        "question": "In Microbiome Analysis, biomarker is (select ALL that apply):",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A gene or protein relevant to the taxonomic diversity of the communities",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "A list of biological pathways of interest in a given experiment",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "A folder output from Mothur tool",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "None of the above",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Picrust and MicrobiomeAnalystR can be used for biomarker discovery.",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Yes",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "No",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+             {
+                "answer": "Need R studio",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "What does MDP stand for?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Marker Data Profiling",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "Modeling Data Processing",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "Maximum Determinant Protein",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "None of the above",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Picrust uses a pre-trained machine learning model to predict biomarker of interest from our experimental dataset:",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "No",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "Yes",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+    {
+        "question": "Metadata or experimental design is required to conduct a meaningful analysis:",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Yes",
+                "correct": true,
+                "feedback": "True."
+            },
+            {
+                "answer": "No",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+           
+        ]
+    },
+    {
+        "question": "MicrobiomeAnalystR needs a R environment to run each module for biomarker discovery:",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Always",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "No",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Require python as well.",
+                "correct": false,
+                "feedback": "incorrect."
+            }
+        ]
+    }
+]
