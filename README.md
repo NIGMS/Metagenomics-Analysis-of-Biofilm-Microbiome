@@ -10,9 +10,10 @@
 - [Workflow Diagrams](#WORK)
     + [Submodule 0 (Python): Introduction - Concept Inventory and Workflow Overview](#LSM0)
     + [Submodule 1 (Python) - Metagenome data preparation and QC](#LSM1)
-    + [Submodule 2 (Python, SHELL) - Microbiome Analysis](#LSM2)
-    + [Submodule 3 (Python, SHELL, R) - Biomarker Discovery](#LSM3)
-    + [Submodule 4 (Python, SHELL) - Microbial Community Analysis](#LSM4)
+    + [Submodule 2 (Python, BASH) - Microbiome Analysis](#LSM2)
+    + [Submodule 3 (Python, BASH, R) - Biomarker Discovery](#LSM3)
+    + [Submodule 4 (Python, BASH) - Microbial Community Analysis](#LSM4)
+    + [Submodule 5 (Python, BASH) - Running workflows at scale with Google Life Sciences API](#LSM5)
 - [Data](#DATA)
 - [Troubleshooting](#TR)
 - [Funding](#FUND)
@@ -57,6 +58,7 @@ The course consists of 5 learning submodules:
 *Submodule #2: Microbiome analysis* <br>
 *Submodule #3: Biomarker Discovery* <br>
 *Submodule #4: Microbiome Community Analysis* <br>
+*Submodule #5: Running workflows at scale with Google Life Sciences API* <br> 
 
 ---
 
@@ -135,23 +137,28 @@ The first step consist in identifying and annotating the project dataset with re
 <b> Step 2 - Raw data QC and improvement (FastQC, MultiQC):</b> 
 Before analysis, we will check the dataset quality using ** FastQC ** and ** MultiQC **. Poor quality reads wil be trimmed using ** Trimmomatic **. 
 
-### [Submodule 2 (Python, SHELL)](./SubModule02.ipynb) - Microbiome Analysis <a name= "LSM2"> </a>
+### [Submodule 2 (Python, BASH)](./SubModule02.ipynb) - Microbiome Analysis <a name= "LSM2"> </a>
 
 <b> Step 3 - Microbiome analysis (Qiime2):</b>
 One of the primary objectives of the workflow is characterizing the taxonomic diversity of biofilm communities from 16S data using Qiime2. This step helps provide insights into the microbial diversity by identifying and associating specific organisms or taxonomic groups with phenotypic/functional traits characterizing a given environment. Taxonomic classification is challenging because the volume of metagenomics data is large and provides a high demands of bioinformatic tools. Additionally, queried sequences of most microbes lack taxonomically related sequences in existing references databases. **Taxonomic binning**, the process of assigning taxonomic identifiers to sequence fragments based on sequence similarity and composition, is used to draft genome reconstruction. The outcome of the binning process can then be used not only for taxonomic diversity assessment, but also leveraged for genome assembly and evaluation of gene association with different taxonomy. 
 
 
-### [Submodule 3 (Python, SHELL, R)](./SubModule03.ipynb) - Biomarker Discovery <a name= "LSM3"> </a>
+### [Submodule 3 (Python, BASH, R)](./SubModule03.ipynb) - Biomarker Discovery <a name= "LSM3"> </a>
 
 <b> Step 4 - Biomarker Discovery (PICRUSt2, q2-Picrust, MicrobeAnalystR): </b> 
 Microbiome Community Gene prediction and the functional annotation are also critical steps in the biofilm metagenomics workflow. Functional annotation of shotgun metagenomic data has become an increasingly popular method for identifying the aggregate functional capacities encoded by the community’s biofilm. This analysis relies on comparisons of predicted genes with existing, previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given biofilm community.
 
 
-### [Submodule 4 (Python, SHELL)](./SubModule04.ipynb) - Microbial Community Analysis <a name= "LSM4"> </a>
+### [Submodule 4 (Python, BASH)](./SubModule04.ipynb) - Microbial Community Analysis <a name= "LSM4"> </a>
 
 <b> Step 5 - Microbial Comminity and Bioofilm analysis (BLAST+, Google Big Query): </b>  
 
 The microbial community analysis relies on comparisons of predicted genes, protein and functions with existing, previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given microbial community and biofilm. Quorum sensing (QS) is one of the key indicators of that communities behavior. Even if the presence of QS does not always guarantee the biofilm formation, this mechanism has proven to be a reliable marker in several phenotype analyses including cancer, dental biofilm, medical device, corrosion, environmental biofilm. Quorum sensing is the regulation of gene expression in response to fluctuations in cell-population density. Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. Here we use the STRING Database and Blast+ to find the most relevant biofilm signature.
+
+
+### [Submodule 5 (Python, BASH)](./SubModule05.ipynb) - Running workflows at scale with Google Life Sciences API <a name= "LSM5"> </a>
+
+This submodule shows how to encapsulate the core concepts of microbiome community analysis into an end-to-end automated workflow that runs on a remote cloud instance. By combining Nextflow with the Google Life Sciences API, we show the user how to automate the entire pipeline. Resources are scheduled, launched, and shut down by the API so there is no need to keep track of running VMs. All output is stored in a cloud storage bucket specified in a config file. This submodule presents a great starting point for learning how to run microbiome analysis at scale with increasing data size and sample number.
 
 
 ---
