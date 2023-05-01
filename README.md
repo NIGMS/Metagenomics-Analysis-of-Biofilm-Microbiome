@@ -63,18 +63,18 @@ The course consists of 5 learning submodules:
 
 
 ## **Getting Started** <a name="GS"></a> 
-Before creating your notebook make sure you have access to and have enabled the tools Big Query and Life Sciences.
-Once that is done go to Vertex AI by searching the name in the search bar, go to Workbench , USER-MANAGED NOTEBOOKS, +NEW NOTEBOOK, then click R 4.2 (or greater). 
+Before creating your notebook make sure you have access to GCP and have enabled the tools Big Query and Life Sciences API.
+Once that is done navigate to Vertex AI, go to Workbench , USER-MANAGED NOTEBOOKS, +NEW NOTEBOOK, then click R 4.2 (or greater).
 <img src="images/notebook_setup.png" width="450" height="300"></img> <br>
-Type in your notebooks name and click ADVANCE OPTIONS<br>
+Type in your notebook's name and click ADVANCE OPTIONS<br>
 <img src="images/Notebook_setup2.png" width="450" height="300"></img> <br>
-Go to the Environment tab and click the drop down menu where it says of Environment, select **'Custom container'**.
-A new field will pop up that says 'Docker container image' type in the following docker container <mark> Ross or Kyle fill in `gcr.io/`</mark> then click CONTINUE at the bottom.
+Go to the Environment tab and click the Environment drop down menu, select **'Custom container'**.
+A new field will pop up that says 'Docker container image'. Type in the following docker container <mark> Ross or Kyle fill in `gcr.io/`</mark> then click CONTINUE at the bottom.
 <img src="images/Notebook_setup4.png" width="450" height="300"></img> <br> <br>
-The GCP Vertex AI notebook instance requires 8 vCPUs, 30 GB RAM so from the Machine Type field click the drop down menu and select machine-type **n1-standard-8**. Now you can click CREATE. <br>
+For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM. Now you can click CREATE. <br>
 <img src="images/Notebook_setup3.png" width="450" height="300"></img>
 
-After creating your Vertex AI notebook from custom docker image metagenomic-pipeline.
+After creating your Vertex AI notebook from custom Docker image metagenomic-pipeline:
 - Open Jupyter Lab
 - Open the terminal: Ctrl + Shift + L -> Other -> Terminal
 - Clone the our repo using the command `git clone https://github.com/NIGMS/MetagenomicsUSD`
@@ -98,7 +98,7 @@ Our Workflow Analytic Toolkits includes the following tools:
 - Google Big Query
 - Blast+
 
-Each dependency will be loaded at the beginning of the module and will allow the user to understand the context in which the package is relevant to our analytic process. Some will be integrated into `requirements.yaml` available in this repository. Some notebooks will require access to the Google Cloud Platform Vertex AI environment. You can install all necessary requirements using the instructions, but they will generally look like this:
+Each dependency will be loaded at the beginning of the module and will allow the user to understand the context in which the package is relevant to our analytic process. Some will be integrated into `requirements.yaml` available in this repository. Some notebooks will require access to the Google Cloud Platform Vertex AI environment. You can install all necessary requirements using the instructions. They will generally look like this:
 ```
 # Code install instructions
 !pip install ./q2-picrust2
@@ -113,11 +113,11 @@ Each dependency will be loaded at the beginning of the module and will allow the
 <img src="images/USD_workflow.png" width="450" height="300"></img>
 
 Figure 1.5. Bioinformatics Workflow
-The metagenomics workflow includes the analysis of the biofilm composition, diversity and function. The workflow consist into 5 steps with Microbiome Analyst acting as an alternative tool to PICRUSt2. 
+The metagenomics workflow includes the analysis of the biofilm composition, diversity and function. The workflow consists of 5 submodules. 
 
 
 ### Cloud Implementation Architecture of Our Workflow
-The image below describes the cloud implementation of our analytic workflow, we will download sequence datasets and databases to our Vertex AI virtual machine, use a custom made kernels to run the analysis, then copy the outputs to a Cloud Storage bucket. 
+The image below describes the cloud implementation of our analytic workflow. We will download sequence datasets and databases to our Vertex AI virtual machine, use custom kernels to run the analysis, then copy the outputs to a Cloud Storage bucket.
 
 <img src="images/USD_TID.png" width="700" height="700">
 
@@ -125,34 +125,34 @@ The image below describes the cloud implementation of our analytic workflow, we 
 ### [Submodule 0 (Python)](./SubModule00.ipynb) - Introduction - Concept Inventory and Workflow Overview <a name="LSM0"></a>
 
 Biofilms have great importance for public health because of their role in certain infectious diseases and importance in a variety of device-related infections.
-This module will expose the learner in fundamental concepts for microbiome analysis.
+This submodule will expose the learner to fundamental concepts of microbiome analysis.
 
 
 ### [Submodule 1 (Python)](./SubModule01.ipynb) - Metagenome data preparation and QC <a name= "LSM1"> </a>
 
 <b> Step 1 - Core data Preparation:</b> 
-The first step consist in identifying and annotating the project dataset with relevant database for machine learning prediction Blast alignment. 
+The first step consists of identifying and downloading the project dataset and databases the rest of the submodules. 
 
 <b> Step 2 - Raw data QC and improvement (FastQC, MultiQC):</b> 
-Before analysis, we will check the dataset quality using ** FastQC ** and ** MultiQC **. Poor quality reads wil be trimmed using ** Trimmomatic **. 
+Before analysis, we will check the dataset quality using FastQC and MultiQC.
 
 ### [Submodule 2 (Python, BASH)](./SubModule02.ipynb) - Microbiome Analysis <a name= "LSM2"> </a>
 
 <b> Step 3 - Microbiome analysis (Qiime2):</b>
-One of the primary objectives of the workflow is characterizing the taxonomic diversity of biofilm communities from 16S data using Qiime2. This step helps provide insights into the microbial diversity by identifying and associating specific organisms or taxonomic groups with phenotypic/functional traits characterizing a given environment. Taxonomic classification is challenging because the volume of metagenomics data is large and provides a high demands of bioinformatic tools. Additionally, queried sequences of most microbes lack taxonomically related sequences in existing references databases. **Taxonomic binning**, the process of assigning taxonomic identifiers to sequence fragments based on sequence similarity and composition, is used to draft genome reconstruction. The outcome of the binning process can then be used not only for taxonomic diversity assessment, but also leveraged for genome assembly and evaluation of gene association with different taxonomy. 
+One of the primary objectives of the workflow is to characterize the taxonomic diversity of biofilm communities from 16S data using Qiime2. This step helps provide insights into the microbial diversity by identifying and associating specific organisms or taxonomic groups with phenotypic/functional traits characterizing a given environment. Taxonomic classification is challenging because the volume of metagenomics data is large and puts high demands on bioinformatic infrastructure. Additionally, queried sequences of most microbes lack taxonomically related sequences in existing references databases. **Taxonomic binning**, the process of assigning taxonomic identifiers to sequence fragments based on sequence similarity and composition, is used in draft genome reconstruction. The outcome of the binning process can then be used not only for taxonomic diversity assessment, but also leveraged for genome assembly and evaluation of gene association with different taxonomy.
 
 
 ### [Submodule 3 (Python, BASH, R)](./SubModule03.ipynb) - Biomarker Discovery <a name= "LSM3"> </a>
 
-<b> Step 4 - Biomarker Discovery (PICRUSt2, q2-Picrust, MicrobeAnalystR): </b> 
-Microbiome Community Gene prediction and the functional annotation are also critical steps in the biofilm metagenomics workflow. Functional annotation of shotgun metagenomic data has become an increasingly popular method for identifying the aggregate functional capacities encoded by the community’s biofilm. This analysis relies on comparisons of predicted genes with existing, previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given biofilm community.
+<b> Step 4 - Biomarker Discovery (PICRUSt2, q2-Picrust): </b> 
+Microbiome community gene prediction and functional annotation are critical steps in the biofilm metagenomics workflow. Functional annotation of metagenomic data has become an increasingly popular method for identifying the aggregate functional capacities encoded by the community’s biofilm. This analysis relies on comparisons of predicted genes with existing, previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given biofilm community.
 
 
 ### [Submodule 4 (Python, BASH)](./SubModule04.ipynb) - Microbial Community Analysis <a name= "LSM4"> </a>
 
-<b> Step 5 - Microbial Comminity and Bioofilm analysis (BLAST+, Google Big Query): </b>  
+<b> Step 5 - Microbial Comminity and Biofilm analysis (BLAST+, Google BigQuery): </b>  
 
-The microbial community analysis relies on comparisons of predicted genes, protein and functions with existing, previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given microbial community and biofilm. Quorum sensing (QS) is one of the key indicators of that communities behavior. Even if the presence of QS does not always guarantee the biofilm formation, this mechanism has proven to be a reliable marker in several phenotype analyses including cancer, dental biofilm, medical device, corrosion, environmental biofilm. Quorum sensing is the regulation of gene expression in response to fluctuations in cell-population density. Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. Here we use the STRING Database and Blast+ to find the most relevant biofilm signature.
+The microbial community analysis relies on comparisons of predicted genes, proteins, and functions with existing previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given microbial community and biofilm. Quorum sensing (QS) is one of the key indicators of a bacterial community's behavior. QS is the regulation of gene expression in response to fluctuations in cell-population density. QS bacteria produce and release chemical signaling molecules called autoinducers that increase in concentration as a function of cell density. The presence of QS signaling does not always guarantee biofilm formation, but this phenomenon has proven to be a reliable marker in several phenotype analyses of biofilms, such as those involved in cancer, dental health, medical devices, corrosion, and environmental biofilms. Here we use the STRING Database and BLAST+ to search for biofilm signatures in our metagenomic samples.
 
 
 ### [Submodule 5 (Python, BASH)](./SubModule05.ipynb) - Running workflows at scale with Google Life Sciences API <a name= "LSM5"> </a>
@@ -162,7 +162,7 @@ This submodule shows how to encapsulate the core concepts of microbiome communit
 
 ---
 # **Data** <a name="DATA"></a>
-This training module will use 5 datasets to cover the diversity of our problem. The testing module will use the dataset from Taxonomic differences of gut microbiomes drive cellulolytic enzymatic potential within hind-gut fermenting mammals by Finlayson-Trick et al., 2017.  We subsequently downsized the data to streamline the tutorials and stored them in a Google Cloud Storage Bucket. 
+This training module will use 5 datasets to cover the diversity of our problem. The testing module will use the dataset from Taxonomic differences of gut microbiomes drive cellulolytic enzymatic potential within hind-gut fermenting mammals by Finlayson-Trick et al., 2017.  We subsequently downsized the data to streamline the tutorials and stored them in a Google Cloud Storage Bucket.
 
 
 ---
