@@ -1,4 +1,4 @@
-# University of South Dakota Metagenomics Dockerized Analysis of Microbial Community and Biofilm 
+# University of South Dakota Dockerized Analysis of Microbial Community and Biofilms 
 ---------------------------------
 
 ## Contents
@@ -24,15 +24,15 @@
 <img src="images/Biofilm Website 2.png" width="800" height="400">
 
 ## **Overview** <a name="OV"></a>
-> INSTRUCTIONS: This README should walk the learner through the background and steps necessary to complete your teaching module. To use our module clone this repo using `git clone https://github.com/NIGMS/MetagenomicsUSD` and then navigate to the directory for this project. For more technical details of the cloud, you can rely on the the [NIH Cloud Lab README](https://github.com/STRIDES/NIHCloudLabGCP).  
+> INSTRUCTIONS: This README should walk the learner through the background and steps necessary to complete this training module. To use our module, clone this repo using `git clone https://github.com/NIGMS/MetagenomicsUSD` and then navigate to the directory for this project. For more technical details of the cloud, see the [NIH Cloud Lab README](https://github.com/STRIDES/NIHCloudLabGCP).
 
-A microbial community and biofilms are complex formations of microbials in collaborative groups, composed of different types of microorganisms such as bacteria, viruses and fungi. This tutorial aims to introduce the learner to Metagenomics Workflow Self-paced Practical Learning Module that will aid in the understanding of biofilms role in human health and beyond. This will include the analysis of the microbial community composition (what microorganism is in my sample?), diversity, and function (what are they doing?). We will leverage quorum sensing protein signatures to provide insights into the microbial community and biofilm gene-phenotype response markers prediction.
+A microbial community and biofilms are complex formations of microbials in collaborative groups, composed of different types of microorganisms such as bacteria, viruses and fungi. This tutorial aims to introduce the learner to microbiome analysis through a self-paced practical learning module that will aid in the understanding of the role of biofilms in human health and beyond. This will include the analysis of the microbial community composition (what microorganism is in my sample?), diversity, and function (what are they doing?). We will leverage quorum sensing protein signatures to provide insights into the microbial community and biofilm gene-phenotype response markers prediction.
 
-This README provides the tutorials to our step-by-step analytic workflow. These tutorials do this by going step-by-step through specific submodules in our workflow. These submodules cover the start to finish of basic bioinformatics analysis starting from core dataset preparation(e.g. downloading raw sequence data), to our microbial community gene/function marker prediction.
+This README describes the tutorials in our step-by-step analytic workflow. These submodules cover the end-to-end workflow of a standard metagenomics  bioinformatics analysis, starting at core dataset preparation (e.g., downloading raw sequence data) through microbial community gene/function marker prediction.
 
 <div class="alert alert-block alert-info">
     <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-    <b>Tip: </b> This version of the training module runs on Docker. If you have any docker related issue, refer to our troubleshooting section below or contact us. 
+    <b>Tip: </b> This module uses Docker. If you have any docker related issue, refer to our troubleshooting section below or contact us. 
 </div>
 
 
@@ -41,30 +41,29 @@ This README provides the tutorials to our step-by-step analytic workflow. These 
 
 ---
 ## **Learning Objectives:** <a name="LOS"></a>
-The Biofilm Metagenomics Workflow Self-Learning Module will serve for undergrad to graduate level. The learning objectives vary slightly based on the audience. It would also be our intention to offer additional technical learning objectives, such as deploying the learning module to alternate platforms and customizing the workflow, for interested students.
-This Docker version will focus on a turn-key-run audience and help them to achieve 2 learning objectives(LOs):
+The biofilm metagenomics workflow self-learning module will serve for undergraduate through graduate level. The learning objectives vary slightly based on the audience. This Docker version will help users to achieve 2 learning objectives (LOs):
 
 LO1. Concepts Inventory
- > Statement 1: The learner will receive fundamental concepts related to microbiome and biofilm analysis. Biofilms have great importance for public health because of their role in certain infectious diseases and importance in a variety of device-related infections.
+ > Statement 1: The learner will learn fundamental concepts related to microbiome and biofilm analysis. Biofilms have great importance for public health because of their role in certain infectious diseases and importance in a variety of device-related infections.
 
 LO2 - Dataset and Toolkits 
-> Statement 1: The learner will be able to describe and manipulate Dataset and Toolkits relevant to microbiome analysis project  - Biofilm Metagenomic analysis can be leveraged to aid in our understanding of microbial taxonomy, functions, interactions, ecology, and evolution.
+> Statement 1: The learner will be able to describe and manipulate datasets and toolkits relevant to microbiome analysis projects. Biofilm metagenomic analysis can be leveraged to aid in our understanding of microbial taxonomy, functions, interactions, ecology, and evolution.
 
 
 The course consists of 5 learning submodules:
 
 *Submodule #0: Introduction - Concept Inventory and Workflow Overview* <br>
-*Submodule #1:  Metagenome data preparation and QC* <br>
-*Submodule #2: Microbiome analysis* <br>
+*Submodule #1: Metagenome Data Preparation and QC* <br>
+*Submodule #2: Microbiome Analysis* <br>
 *Submodule #3: Biomarker Discovery* <br>
 *Submodule #4: Microbiome Community Analysis* <br>
-*Submodule #5: Running workflows at scale with Google Life Sciences API* <br> 
+*Submodule #5: Running Wrkflows at Scale with Google Life Sciences API* <br> 
 
 ---
 
 
 ## **Getting Started** <a name="GS"></a> 
-Before creating your notebook make sure you has access to and have enabled the tools Big Query and Life Sciences.
+Before creating your notebook make sure you have access to and have enabled the tools Big Query and Life Sciences.
 Once that is done go to Vertex AI by searching the name in the search bar, go to Workbench , USER-MANAGED NOTEBOOKS, +NEW NOTEBOOK, then click R 4.2 (or greater). 
 <img src="images/notebook_setup.png" width="450" height="300"></img> <br>
 Type in your notebooks name and click ADVANCE OPTIONS<br>
