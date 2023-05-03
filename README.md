@@ -112,8 +112,8 @@ Each dependency will be loaded at the beginning of the module and will allow the
 
 <img src="images/USD_workflow.png" width="450" height="300"></img>
 
-Figure 1.5. Bioinformatics Workflow
-The metagenomics workflow includes the analysis of the biofilm composition, diversity and function. The workflow consists of 5 submodules. 
+Figure 1.5. Workflow.
+The metagenomics workflow includes the analysis of the biofilm composition, diversity and function. The workflow consists of 5 submodules.
 
 
 ### Cloud Implementation Architecture of Our Workflow
@@ -162,16 +162,16 @@ This submodule shows how to encapsulate the core concepts of microbiome communit
 
 ---
 # **Data** <a name="DATA"></a>
-This training module will use 5 datasets to cover the diversity of our problem. The testing module will use the dataset from Taxonomic differences of gut microbiomes drive cellulolytic enzymatic potential within hind-gut fermenting mammals by Finlayson-Trick et al., 2017.  We subsequently downsized the data to streamline the tutorials and stored them in a Google Cloud Storage Bucket.
+This training module will use 2 datasets to cover the diversity of our problem. Most of the module will use the dataset featured in [Moving pictures of the human microbiome](https://pubmed.ncbi.nlm.nih.gov/21624126/) published by Caporaso et al in 2011. For our fifth submodule that demonstrates nf-core's ampliseq workflow, we use a fecal microbiome sample, [SRR24091844](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR24091844&display=metadata).
 
 
 ---
 # **Troubleshooting** <a name="TR"></a>
 
-This workflow execution common error include: authentication to GCP error.  
-1. Missing file:
-    - Wrong file path: find the correct file in 5 folders 1 -> 5 then update the correct file path
-    - File does not exist: find on provided bucket or given links in notebook
+Common errors encountered in this workflow include: 
+1. Missing file. This error can have multiple causes:
+    - Wrong file path: Find the correct file in notebook directories, then update the correct file path.
+    - File does not exist: Find on provided bucket or given links in notebook
     - Check previous steps make sure previous step run successfully
 2. Cannot create/remove file or folder: This error can appear during run and rerun the pipeline, usually the file already exist, so follow the alters that ask you to delete the directory or the files within the directory.
 3. Please make sure that the picrust2 directory is not moved as it contains scripts whos path have been added to this containers PATH. If it is moved picrust will not work.
