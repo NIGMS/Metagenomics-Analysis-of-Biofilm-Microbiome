@@ -171,11 +171,10 @@ This training module will use 2 datasets to cover the diversity of our problem. 
 Common errors encountered in this workflow include: 
 1. Missing file. This error can have multiple causes:
     - Wrong file path: Find the correct file in notebook directories, then update the correct file path.
-    - File does not exist: Find on provided bucket or given links in notebook
-    - Check previous steps make sure previous step run successfully
-2. Cannot create/remove file or folder: This error can appear during run and rerun the pipeline, usually the file already exist, so follow the alters that ask you to delete the directory or the files within the directory.
-3. Please make sure that the picrust2 directory is not moved as it contains scripts whos path have been added to this containers PATH. If it is moved picrust will not work.
-4. If your notebook does not start up when clicking JUPYTERLAB close the windo and wait 60 secs before you open it again.
+    - File does not exist: Find path in the provided bucket or notebook and update command.
+    - File was not generated: Check previous steps make sure previous step run successfully.
+2. Cannot create/remove file or folder: This error can appear when you rerun the pipeline. You must usually delete the directory or the files within the output directory from processes like Qiime2.
+3. Please make sure that the PICRUSt2 directory is not moved as it contains scripts whose path have been hard-coded in the containers.
 
 ---
 # **Funding** <a name="FUND"></a>
