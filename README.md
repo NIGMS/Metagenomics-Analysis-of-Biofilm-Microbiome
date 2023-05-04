@@ -69,7 +69,7 @@ Once that is done navigate to Vertex AI, go to Workbench , USER-MANAGED NOTEBOOK
 Type in your notebook's name and click ADVANCE OPTIONS<br>
 <img src="images/Notebook_setup2.png" width="450" height="300"></img> <br>
 Go to the Environment tab and click the Environment drop down menu, select **'Custom container'**.
-A new field will pop up that says 'Docker container image'. Type in the following docker container <mark> Ross or Kyle fill in `gcr.io/`</mark> then click CONTINUE at the bottom.
+A new field will pop up that says 'Docker container image'. Type in the following Docker container <mark> `us-east4-docker.pkg.dev/cit-oconnellka-9999/nigms-docker-repository/metagenomic-pipeline@sha256:2777ea8afbcd0f632ae7f04ebeb3a8ed21775fa3c6e9ba529046ba422bc8aaa7`</mark> then click CONTINUE at the bottom.
 <img src="images/Notebook_setup4.png" width="450" height="300"></img> <br> <br>
 For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM. Now you can click CREATE. <br>
 <img src="images/Notebook_setup3.png" width="450" height="300"></img>
