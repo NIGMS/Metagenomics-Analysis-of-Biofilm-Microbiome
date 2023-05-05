@@ -30,6 +30,8 @@ A microbial community and biofilms are complex formations of microbials in colla
 
 This README describes the tutorials in our step-by-step analytic workflow. These submodules cover the end-to-end workflow of a standard metagenomics  bioinformatics analysis, starting at core dataset preparation (e.g., downloading raw sequence data) through microbial community gene/function marker prediction.
 
+This module will cost about $8.00 to run, assuming you shut down and delete all resources when you are finished.
+
 <div class="alert alert-block alert-info">
     <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
     <b>Tip: </b> This module uses Docker. If you have any docker related issue, refer to our troubleshooting section below or contact us. 
