@@ -39,7 +39,7 @@ This module will cost about $8.00 to run, assuming you shut down and delete all 
 
 
 
-<font color = "red"> <b>[Intro_video] </b> </font>
+Watch this [Introduction Video](https://youtu.be/MN-PgnNxqww) to learn more about the module.
 
 ---
 ## **Learning Objectives:** <a name="LOS"></a>
