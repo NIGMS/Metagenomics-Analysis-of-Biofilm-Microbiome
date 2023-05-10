@@ -3,27 +3,27 @@
 
 ## Contents
 
-- [Overview](#OV)
-- [Learning Objectives](#LOS)
-- [Getting Started](#GS)
-- [Software Requirements](#SOF)
-- [Workflow Diagrams](#WORK)
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Getting Started](#getting-started)
+- [Software Requirements](#software-requirements)
+- [Workflow Diagrams](#workflow-diagrams)
     + [Submodule 0 (Python): Introduction - Concept Inventory and Workflow Overview](#LSM0)
     + [Submodule 1 (Python) - Metagenome data preparation and QC](#LSM1)
     + [Submodule 2 (Python, BASH) - Microbiome Analysis](#LSM2)
     + [Submodule 3 (Python, BASH, R) - Biomarker Discovery](#LSM3)
     + [Submodule 4 (Python, BASH) - Microbial Community Analysis](#LSM4)
     + [Submodule 5 (Python, BASH) - Running workflows at scale with Google Life Sciences API](#LSM5)
-- [Data](#DATA)
-- [Troubleshooting](#TR)
-- [Funding](#FUND)
-- [License for Data](#LIC) 
+- [Data](#data)
+- [Troubleshooting](#troubleshooting)
+- [Funding](#funding)
+- [License for Data](#license-for-data) 
 
 ---
 
 <img src="images/Biofilm Website 2.png" width="800" height="400">
 
-## **Overview** <a name="OV"></a>
+## **Overview**
 > INSTRUCTIONS: This README should walk the learner through the background and steps necessary to complete this training module. To use our module, clone this repo using `git clone https://github.com/NIGMS/MetagenomicsUSD` and then navigate to the directory for this project. For more technical details of the cloud, see the [NIH Cloud Lab README](https://github.com/STRIDES/NIHCloudLabGCP).
 
 A microbial community and biofilms are complex formations of microbials in collaborative groups, composed of different types of microorganisms such as bacteria, viruses and fungi. This tutorial aims to introduce the learner to microbiome analysis through a self-paced practical learning module that will aid in the understanding of the role of biofilms in human health and beyond. This will include the analysis of the microbial community composition (what microorganism is in my sample?), diversity, and function (what are they doing?). We will leverage quorum sensing protein signatures to provide insights into the microbial community and biofilm gene-phenotype response markers prediction.
@@ -44,7 +44,7 @@ Watch this [Introduction Video](https://youtu.be/MN-PgnNxqww) to learn more abou
 
 
 ---
-## **Learning Objectives:** <a name="LOS"></a>
+## **Learning Objectives:**
 The biofilm metagenomics workflow self-learning module will serve for undergraduate through graduate level. The learning objectives vary slightly based on the audience. This Docker version will help users to achieve 2 learning objectives (LOs):
 
 LO1. Concepts Inventory
@@ -66,7 +66,7 @@ The course consists of 5 learning submodules:
 ---
 
 
-## **Getting Started** <a name="GS"></a> 
+## **Getting Started**
 Before creating your notebook make sure you have access to GCP and have enabled the tools Big Query and Life Sciences API.
 Once that is done navigate to Vertex AI, go to Workbench , USER-MANAGED NOTEBOOKS, +NEW NOTEBOOK, then click R 4.2 (or greater).
 <img src="images/notebook_setup.png" width="450" height="300"></img> <br>
@@ -87,7 +87,7 @@ After creating your Vertex AI notebook from custom Docker image metagenomic-pipe
 
 ---
 
-## **Software Requirements** <a name="SOF"></a>
+## **Software Requirements**
 
 Our Workflow Analytic Toolkits includes the following tools: 
 - Docker
@@ -110,7 +110,7 @@ Each dependency will be loaded at the beginning of the module and will allow the
 
 
 ---
-## **Workflow Diagrams** <a name="WORK"></a>
+## **Workflow Diagrams**
 
 ### Bioinformatics Workflow Diagrams
 
@@ -165,12 +165,12 @@ This submodule shows how to encapsulate the core concepts of microbiome communit
 
 
 ---
-# **Data** <a name="DATA"></a>
+# **Data**
 This training module will use 2 datasets to cover the diversity of our problem. Most of the module will use the dataset featured in [Moving pictures of the human microbiome](https://pubmed.ncbi.nlm.nih.gov/21624126/) published by Caporaso et al in 2011. For our fifth submodule that demonstrates nf-core's ampliseq workflow, we use a fecal microbiome sample, [SRR24091844](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR24091844&display=metadata).
 
 
 ---
-# **Troubleshooting** <a name="TR"></a>
+# **Troubleshooting**
 
 Common errors encountered in this workflow include: 
 1. Missing file. This error can have multiple causes:
@@ -181,12 +181,12 @@ Common errors encountered in this workflow include:
 3. Please make sure that the PICRUSt2 directory is not moved as it contains scripts whose path have been hard-coded in the containers.
 
 ---
-# **Funding** <a name="FUND"></a>
+# **Funding**
 
 >Funded by the South Dakota INBRE Program NIH/NIGMS P20 GM103443.
 
 ---
-# **License for Data** <a name="LIC"></a>
+# **License for Data**
 
 All data and download files in STRING-DB are freely available under a 'Creative Commons BY 4.0' license.
 
