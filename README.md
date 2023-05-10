@@ -100,7 +100,7 @@ Our Workflow Analytic Toolkits includes the following tools:
 - FastQC
 - MultiQC
 - Trimmomatic
-- QUIIME2
+- QIIME2
 - Picrust2
 - MicrobiomeAnalystR
 - Google Big Query
