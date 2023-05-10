@@ -8,12 +8,12 @@
 - [Getting Started](#getting-started)
 - [Software Requirements](#software-requirements)
 - [Workflow Diagrams](#workflow-diagrams)
-    + [Submodule 0 (Python): Introduction - Concept Inventory and Workflow Overview](#LSM0)
-    + [Submodule 1 (Python) - Metagenome data preparation and QC](#LSM1)
-    + [Submodule 2 (Python, BASH) - Microbiome Analysis](#LSM2)
-    + [Submodule 3 (Python, BASH, R) - Biomarker Discovery](#LSM3)
-    + [Submodule 4 (Python, BASH) - Microbial Community Analysis](#LSM4)
-    + [Submodule 5 (Python, BASH) - Running workflows at scale with Google Life Sciences API](#LSM5)
+- [Submodule 0 (Python): Introduction-Concept Inventory and Workflow Overview](#LSM0)
+- [Submodule 1 (Python) - Metagenome data preparation and QC](#LSM1)
+- [Submodule 2 (Python, BASH) - Microbiome Analysis](#LSM2)
+- [Submodule 3 (Python, BASH, R) - Biomarker Discovery](#LSM3)
+- [Submodule 4 (Python, BASH) - Microbial Community Analysis](#LSM4)
+- [Submodule 5 (Python, BASH) - Running workflows at scale with Google Life Sciences API](#LSM5)
 - [Data](#data)
 - [Troubleshooting](#troubleshooting)
 - [Funding](#funding)
@@ -21,7 +21,7 @@
 
 ---
 
-<img src="images/Biofilm Website 2.png" width="800" height="400">
+![Biofilm website](images/Biofilm_Website_2.png)
 
 ## **Overview**
 > INSTRUCTIONS: This README should walk the learner through the background and steps necessary to complete this training module. To use our module, clone this repo using `git clone https://github.com/NIGMS/MetagenomicsUSD` and then navigate to the directory for this project. For more technical details of the cloud, see the [NIH Cloud Lab README](https://github.com/STRIDES/NIHCloudLabGCP).
@@ -34,10 +34,8 @@ This module will cost about $8.00 to run, assuming you shut down and delete all 
 
 Watch this [Introduction Video](https://youtu.be/MN-PgnNxqww) to learn more about the module.
 
-<div class="alert alert-block alert-info">
-    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-    <b>Tip: </b> This module uses Docker. If you have any docker related issue, refer to our troubleshooting section below or contact us. 
-</div>
+
+Tip: This module uses Docker. If you have any docker related issue, refer to our troubleshooting section below or contact us.
 
 
 
@@ -56,12 +54,12 @@ LO2 - Dataset and Toolkits
 
 The course consists of 5 learning submodules:
 
-*Submodule #0: Introduction - Concept Inventory and Workflow Overview* <br>
-*Submodule #1: Metagenome Data Preparation and QC* <br>
-*Submodule #2: Microbiome Analysis* <br>
-*Submodule #3: Biomarker Discovery* <br>
-*Submodule #4: Microbiome Community Analysis* <br>
-*Submodule #5: Running Wrkflows at Scale with Google Life Sciences API* <br> 
+*Submodule #0: Introduction - Concept Inventory and Workflow Overview*  
+*Submodule #1: Metagenome Data Preparation and QC*  
+*Submodule #2: Microbiome Analysis*  
+*Submodule #3: Biomarker Discovery*  
+*Submodule #4: Microbiome Community Analysis*  
+*Submodule #5: Running Workflows at Scale with Google Life Sciences API*  
 
 ---
 
@@ -69,14 +67,20 @@ The course consists of 5 learning submodules:
 ## **Getting Started**
 Before creating your notebook make sure you have access to GCP and have enabled the tools Big Query and Life Sciences API.
 Once that is done navigate to Vertex AI, go to Workbench , USER-MANAGED NOTEBOOKS, +NEW NOTEBOOK, then click R 4.2 (or greater).
-<img src="images/notebook_setup.png" width="450" height="300"></img> <br>
-Type in your notebook's name and click ADVANCE OPTIONS<br>
-<img src="images/Notebook_setup2.png" width="450" height="300"></img> <br>
+![notebook setup](images/notebook_setup.png)
+
+Type in your notebook's name and click ADVANCED OPTIONS
+
+![notebook setup 2](images/Notebook_setup2.png)
+
 Go to the Environment tab and click the Environment drop down menu, select **'Custom container'**.
-A new field will pop up that says 'Docker container image'. Type in the following Docker container <mark> `us-east4-docker.pkg.dev/cit-oconnellka-9999/nigms-docker-repository/metagenomic-pipeline@sha256:2777ea8afbcd0f632ae7f04ebeb3a8ed21775fa3c6e9ba529046ba422bc8aaa7`</mark> then click CONTINUE at the bottom.
-<img src="images/Notebook_setup4.png" width="450" height="300"></img> <br> <br>
-For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM. Now you can click CREATE. <br>
-<img src="images/Notebook_setup3.png" width="450" height="300"></img>
+A new field will pop up that says 'Docker container image'. Type in the following Docker container `us-east4-docker.pkg.dev/cit-oconnellka-9999/nigms-docker-repository/metagenomic-pipeline@sha256:2777ea8afbcd0f632ae7f04ebeb3a8ed21775fa3c6e9ba529046ba422bc8aaa7` then click CONTINUE at the bottom.
+
+![notebook setup 4](images/Notebook_setup4.png)
+
+For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM. Now you can click CREATE.
+
+![notebook setup 3](images/Notebook_setup3.png)
 
 After creating your Vertex AI notebook from custom Docker image metagenomic-pipeline:
 - Open Jupyter Lab
@@ -112,18 +116,18 @@ Each dependency will be loaded at the beginning of the module and will allow the
 ---
 ## **Workflow Diagrams**
 
-### Bioinformatics Workflow Diagrams
+## Bioinformatics Workflow Diagrams
 
-<img src="images/USD_workflow.png" width="450" height="300"></img>
+![USD workflow](images/USD_workflow.png)
 
 Figure 1.5. Workflow.
 The metagenomics workflow includes the analysis of the biofilm composition, diversity and function. The workflow consists of 5 submodules.
 
 
-### Cloud Implementation Architecture of Our Workflow
+## Cloud Implementation Architecture of Our Workflow
 The image below describes the cloud implementation of our analytic workflow. We will download sequence datasets and databases to our Vertex AI virtual machine, use custom kernels to run the analysis, then copy the outputs to a Cloud Storage bucket.
 
-<img src="images/USD_TID.png" width="700" height="700">
+![technical infrastructure diagram](images/USD_TID.png)
 
 
 ### [Submodule 0 (Python)](./SubModule00.ipynb) - Introduction - Concept Inventory and Workflow Overview <a name="LSM0"></a>
@@ -192,10 +196,8 @@ All data and download files in STRING-DB are freely available under a 'Creative 
 
 Text and materials are licensed under a Creative Commons CC-BY-NC-SA license. The license allows you to copy, remix and redistribute any of our publicly available materials, under the condition that you attribute the work (details in the license) and do not make profits from it. More information is available [here](https://tilburgsciencehub.com/about/#license).
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
+Text and materials are licensed under a Creative Commons CC-BY-NC-SA license. The license allows you to copy, remix and redistribute any of our publicly available materials, under the condition that you attribute the work (details in the license) and do not make profits from it. More information is available [here](https://tilburgsciencehub.com/about/#license).
 
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+![Creative commons license](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-```python
-
-```
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
