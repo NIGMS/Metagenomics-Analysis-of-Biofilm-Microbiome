@@ -8,12 +8,12 @@
 - [Getting Started](#getting-started)
 - [Software Requirements](#software-requirements)
 - [Workflow Diagrams](#workflow-diagrams)
-- [Submodule 0 (Python): Introduction-Concept Inventory and Workflow Overview](#LSM0)
-- [Submodule 1 (Python) - Metagenome data preparation and QC](#LSM1)
-- [Submodule 2 (Python, BASH) - Microbiome Analysis](#LSM2)
-- [Submodule 3 (Python, BASH, R) - Biomarker Discovery](#LSM3)
-- [Submodule 4 (Python, BASH) - Microbial Community Analysis](#LSM4)
-- [Submodule 5 (Python, BASH) - Running workflows at scale with Google Life Sciences API](#LSM5)
+- [Submodule 0 Introduction](#submodule-0-introduction)
+- [Submodule 1 Metagenome data preparation and QC](#submodule-1-metagenome-data-preparation-and-qc)
+- [Submodule 2 Microbiome Analysis](#submodule-2-microbiome-analysis)
+- [Submodule 3 Biomarker Discovery](#submodule-3-biomarker-discovery)
+- [Submodule 4 Microbial Community Analysis](#submodule-4-microbial-community-analysis)
+- [Submodule 5 Running workflows at scale with Google Life Sciences API](#submodule-5-running-workflows-at-scale-with-google-life-sciences-api)
 - [Data](#data)
 - [Troubleshooting](#troubleshooting)
 - [Funding](#funding)
@@ -130,13 +130,13 @@ The image below describes the cloud implementation of our analytic workflow. We 
 ![technical infrastructure diagram](images/USD_TID.png)
 
 
-### [Submodule 0 (Python)](./SubModule00.ipynb) - Introduction - Concept Inventory and Workflow Overview <a name="LSM0"></a>
+### Submodule 0 Introduction  
 
 Biofilms have great importance for public health because of their role in certain infectious diseases and importance in a variety of device-related infections.
 This submodule will expose the learner to fundamental concepts of microbiome analysis.
 
 
-### [Submodule 1 (Python)](./SubModule01.ipynb) - Metagenome data preparation and QC <a name= "LSM1"> </a>
+### Submodule 1 Metagenome data preparation and QC   
 
 <b> Step 1 - Core data Preparation:</b> 
 The first step consists of identifying and downloading the project dataset and databases the rest of the submodules. 
@@ -144,26 +144,26 @@ The first step consists of identifying and downloading the project dataset and d
 <b> Step 2 - Raw data QC and improvement (FastQC, MultiQC):</b> 
 Before analysis, we will check the dataset quality using FastQC and MultiQC.
 
-### [Submodule 2 (Python, BASH)](./SubModule02.ipynb) - Microbiome Analysis <a name= "LSM2"> </a>
+### Submodule 2 Microbiome Analysis   
 
 <b> Step 3 - Microbiome analysis (Qiime2):</b>
 One of the primary objectives of the workflow is to characterize the taxonomic diversity of biofilm communities from 16S data using Qiime2. This step helps provide insights into the microbial diversity by identifying and associating specific organisms or taxonomic groups with phenotypic/functional traits characterizing a given environment. Taxonomic classification is challenging because the volume of metagenomics data is large and puts high demands on bioinformatic infrastructure. Additionally, queried sequences of most microbes lack taxonomically related sequences in existing references databases. **Taxonomic binning**, the process of assigning taxonomic identifiers to sequence fragments based on sequence similarity and composition, is used in draft genome reconstruction. The outcome of the binning process can then be used not only for taxonomic diversity assessment, but also leveraged for genome assembly and evaluation of gene association with different taxonomy.
 
 
-### [Submodule 3 (Python, BASH, R)](./SubModule03.ipynb) - Biomarker Discovery <a name= "LSM3"> </a>
+### Submodule 3 Biomarker Discovery   
 
 <b> Step 4 - Biomarker Discovery (PICRUSt2, q2-Picrust): </b> 
 Microbiome community gene prediction and functional annotation are critical steps in the biofilm metagenomics workflow. Functional annotation of metagenomic data has become an increasingly popular method for identifying the aggregate functional capacities encoded by the community’s biofilm. This analysis relies on comparisons of predicted genes with existing, previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given biofilm community.
 
 
-### [Submodule 4 (Python, BASH)](./SubModule04.ipynb) - Microbial Community Analysis <a name= "LSM4"> </a>
+### Submodule 4 Microbial Community Analysis   
 
 <b> Step 5 - Microbial Comminity and Biofilm analysis (BLAST+, Google BigQuery): </b>  
 
 The microbial community analysis relies on comparisons of predicted genes, proteins, and functions with existing previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given microbial community and biofilm. Quorum sensing (QS) is one of the key indicators of a bacterial community's behavior. QS is the regulation of gene expression in response to fluctuations in cell-population density. QS bacteria produce and release chemical signaling molecules called autoinducers that increase in concentration as a function of cell density. The presence of QS signaling does not always guarantee biofilm formation, but this phenomenon has proven to be a reliable marker in several phenotype analyses of biofilms, such as those involved in cancer, dental health, medical devices, corrosion, and environmental biofilms. Here we use the STRING Database and BLAST+ to search for biofilm signatures in our metagenomic samples.
 
 
-### [Submodule 5 (Python, BASH)](./SubModule05.ipynb) - Running workflows at scale with Google Life Sciences API <a name= "LSM5"> </a>
+### Submodule 5 Running workflows at scale with Google Life Sciences API   
 
 This submodule shows how to encapsulate the core concepts of microbiome community analysis into an end-to-end automated workflow that runs on a remote cloud instance. By combining Nextflow with the Google Life Sciences API, we show the user how to automate the entire pipeline. Resources are scheduled, launched, and shut down by the API so there is no need to keep track of running VMs. All output is stored in a cloud storage bucket specified in a config file. This submodule presents a great starting point for learning how to run microbiome analysis at scale with increasing data size and sample number.
 
