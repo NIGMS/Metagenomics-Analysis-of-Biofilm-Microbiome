@@ -104,7 +104,7 @@ Our Workflow Analytic Toolkits includes the following tools:
 - Picrust2
 - MicrobiomeAnalystR
 - Google Big Query
-- Blast+
+- BLAST+
 
 Each dependency will be loaded at the beginning of the module and will allow the user to understand the context in which the package is relevant to our analytic process. Some will be integrated into `requirements.yaml` available in this repository. Some notebooks will require access to the Google Cloud Platform Vertex AI environment. You can install all necessary requirements using the instructions. They will generally look like this:
 ```
