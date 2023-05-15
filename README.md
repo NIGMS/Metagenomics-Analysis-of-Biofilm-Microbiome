@@ -32,8 +32,6 @@ This README describes the tutorials in our step-by-step analytic workflow. These
 
 This module will cost about $8.00 to run, assuming you shut down and delete all resources when you are finished.
 
-Watch this [Introduction Video](https://youtu.be/MN-PgnNxqww) to learn more about the module.
-
 
 Tip: This module uses Docker. If you have any docker related issue, refer to our troubleshooting section below or contact us.
 
