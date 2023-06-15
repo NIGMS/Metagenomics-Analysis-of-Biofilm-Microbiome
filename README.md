@@ -1,3 +1,5 @@
+![course-card](images/USD-course-card.png)
+
 # University of South Dakota Dockerized Analysis of Microbial Community and Biofilms 
 
 
