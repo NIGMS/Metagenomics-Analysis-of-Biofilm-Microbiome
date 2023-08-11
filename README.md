@@ -66,26 +66,29 @@ The course consists of 5 learning submodules:
 
 ## **Getting Started**
 Before creating your notebook make sure you have access to GCP and have enabled the tools Big Query and Life Sciences API.
-Once that is done navigate to Vertex AI, go to Workbench , USER-MANAGED NOTEBOOKS, +NEW NOTEBOOK, then click R 4.2 (or greater).
-![notebook setup](images/notebook_setup.png)
+Once that is done navigate to Vertex AI, go to Workbench. 
 
-Type in your notebook's name and click ADVANCED OPTIONS
+Make sure User-Managed Notebooks is highlighted, as shown in the screenshot below. 
 
-![notebook setup 2](images/Notebook_setup2.png)
+![Create New user managed notebook](images/Create_new_notebook.png)
 
-Go to the Environment tab and click the Environment drop down menu, select **'Custom container'**.
-A new field will pop up that says 'Docker container image'. Type in the following Docker container `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/metagenomic-pipeline@sha256:2777ea8afbcd0f632ae7f04ebeb3a8ed21775fa3c6e9ba529046ba422bc8aaa7` then click CONTINUE at the bottom.
+In the new instance window, scroll down and select Advanced Options
 
-![notebook setup 4](images/Notebook_setup4.png)
+![Select Advanced Options](images/Advanced_options.png)
 
-For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM. Now you can click CREATE.
+In the Environment tab, Select the Debian 10 operating system and Custom container under environment. A new field will appear that says 'Docker container image'. Type in the following path to the Docker container `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/metagenomic-pipeline@sha256:2777ea8afbcd0f632ae7f04ebeb3a8ed21775fa3c6e9ba529046ba422bc8aaa7` 
 
-![notebook setup 3](images/Notebook_setup3.png)
+Make sure to click the Enable Idle Shutdown button in the Machine type tab as shown in the screenshot below. Finally, select the appropriate hardware in the Machine type tab. For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM.
+
+![Enable Idle Shutdown](images/Enable_auto_shutdown.png)
+
+Now you can click CREATE.
+
 
 After creating your Vertex AI notebook from custom Docker image metagenomic-pipeline:
 - Open Jupyter Lab
 - Open the terminal: Ctrl + Shift + L -> Other -> Terminal
-- Clone the our repo using the command `git clone https://github.com/NIGMS/MetagenomicsUSD`
+- Clone the our repo using the command `git clone https://github.com/NIGMS/Metagenomics-Analysis-of-Biofilm-Microbiome.git`
 
 
 
