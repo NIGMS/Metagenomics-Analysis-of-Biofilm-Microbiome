@@ -78,11 +78,11 @@ In the new instance window, scroll down and select Advanced Options
 
 In the Environment tab, Select the Debian 10 operating system and Custom container under environment. A new field will appear that says 'Docker container image'. Type in the following path to the Docker container `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/metagenomic-pipeline@sha256:2777ea8afbcd0f632ae7f04ebeb3a8ed21775fa3c6e9ba529046ba422bc8aaa7` 
 
-Make sure to click the Enable Idle Shutdown button in the Machine type tab as shown in the screenshot below. Finally, select the appropriate hardware in the Machine type tab. For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM.
+Make sure to click the **Enable Idle Shutdown** button in the Machine type tab as shown in the screenshot below. Finally, select the appropriate hardware in the Machine type tab. For this module we recommend the **n1-standard-8** notebook instance with 8 vCPUs, 30 GB RAM.
 
 ![Enable Idle Shutdown](images/Enable_auto_shutdown.png)
 
-Now you can click CREATE.
+Now you can click **CREATE**.
 
 
 After creating your Vertex AI notebook from custom Docker image metagenomic-pipeline:
