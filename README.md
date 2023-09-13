@@ -15,7 +15,7 @@
 - [Submodule 2 Microbiome Analysis](#submodule-2-microbiome-analysis)
 - [Submodule 3 Biomarker Discovery](#submodule-3-biomarker-discovery)
 - [Submodule 4 Microbial Community Analysis](#submodule-4-microbial-community-analysis)
-- [Submodule 5 Running workflows at scale with Google Life Sciences API](#submodule-5-running-workflows-at-scale-with-google-life-sciences-api)
+- [Submodule 5 Running workflows at scale with Google Batch](#submodule-5-running-workflows-at-scale-with-google-batch)
 - [Data](#data)
 - [Troubleshooting](#troubleshooting)
 - [Funding](#funding)
@@ -59,7 +59,7 @@ The course consists of 5 learning submodules:
 *Submodule #2: Microbiome Analysis*  
 *Submodule #3: Biomarker Discovery*  
 *Submodule #4: Microbiome Community Analysis*  
-*Submodule #5: Running Workflows at Scale with Google Life Sciences API*  
+*Submodule #5: Running Workflows at Scale with Google Batch*  
 
 
 
@@ -148,9 +148,9 @@ Microbiome community gene prediction and functional annotation are critical step
 The microbial community analysis relies on comparisons of predicted genes, proteins, and functions with existing previously annotated sequences. Functional profiling provides insights into what functions are carried out by a given microbial community and biofilm. Quorum sensing (QS) is one of the key indicators of a bacterial community's behavior. QS is the regulation of gene expression in response to fluctuations in cell-population density. QS bacteria produce and release chemical signaling molecules called autoinducers that increase in concentration as a function of cell density. The presence of QS signaling does not always guarantee biofilm formation, but this phenomenon has proven to be a reliable marker in several phenotype analyses of biofilms, such as those involved in cancer, dental health, medical devices, corrosion, and environmental biofilms. Here we use the STRING Database and BLAST+ to search for biofilm signatures in our metagenomic samples.
 
 
-## Submodule 5 Running workflows at scale with Google Life Sciences API   
+## Submodule 5 Running workflows at scale with Google Batch   
 
-This submodule shows how to encapsulate the core concepts of microbiome community analysis into an end-to-end automated workflow that runs on a remote cloud instance. By combining Nextflow with the Google Life Sciences API, we show the user how to automate the entire pipeline. Resources are scheduled, launched, and shut down by the API so there is no need to keep track of running VMs. All output is stored in a cloud storage bucket specified in a config file. This submodule presents a great starting point for learning how to run microbiome analysis at scale with increasing data size and sample number.
+This submodule shows how to encapsulate the core concepts of microbiome community analysis into an end-to-end automated workflow that runs on a remote cloud instance. By combining Nextflow with Google Batch, we show the user how to automate the entire pipeline. Resources are scheduled, launched, and shut down by the API so there is no need to keep track of running VMs. All output is stored in a cloud storage bucket specified in a config file. This submodule presents a great starting point for learning how to run microbiome analysis at scale with increasing data size and sample number.
 
 
 
