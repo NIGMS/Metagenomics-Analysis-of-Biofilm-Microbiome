@@ -108,7 +108,7 @@ The metagenomics workflow includes the analysis of the biofilm composition, dive
 ## Cloud Implementation Architecture of Our Workflow
 The image below describes the cloud implementation of our analytic workflow. We will download sequence datasets and databases to our Vertex AI virtual machine, use custom kernels to run the analysis, then copy the outputs to a Cloud Storage bucket.
 
-![technical infrastructure diagram](images/USD_TID.png)
+![technical infrastructure diagram](images/Architecture_Diagram_GCP.png)
 
 
 ## Submodule 0 Introduction  
