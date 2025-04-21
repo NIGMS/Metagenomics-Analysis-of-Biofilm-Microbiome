@@ -27,7 +27,7 @@ To clone this repository, use the Git command `git clone https://github.com/NIGM
 
 ### Creating a user managed notebook for submodule 5 (Optional): 
 
-* **Python Kernel:** Follow the steps highlighted [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateVertexAINotebooks.md) to create a new notebook instance in Vertex AI. Follow steps 1-8 and be especially careful to enable idle shutdown as highlighted in step 8. In step 7 in the Machine type tab, select n1-standard-32 from the dropdown box and increase data disk size to 300 GB.
+* **Python Kernel:** Follow the steps highlighted [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateVertexAINotebooks.md) to create a new notebook instance in Vertex AI. Follow steps 1-8 and be especially careful to enable idle shutdown as highlighted in step 8. In step 7 in the Machine type tab, select n1-standard-32 from the dropdown box. Increase data disk size to 300 GB.
 <p align="center">
   <img src="../images/disk-size-gcp.png" />
 </p>
