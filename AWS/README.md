@@ -1,22 +1,42 @@
 
 ![Biofilm website](../images/Biofilm_Website_2.png)
 
-## Contents
+## **Contents**
 
 - [Getting Started](#getting-started)
 - [Workflow Diagrams](#workflow-diagrams)
 
 ## **Getting Started**
 
-Follow the steps highlighted [here](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/vertexai.md) to create a new user-managed notebook in Vertex AI. Follow steps 1-8 and be especially careful to enable idle shutdown as highlighted in step 7. In step 5 click the **Environment** drop down menu, select **'Custom container'**. A new field will pop up that says 'Docker container image'. Type in the following Docker container `us-east4-docker.pkg.dev/nih-cl-shared-resources/nigms-sandbox/metagenomic-pipeline@sha256:8f77cb07b0ffdddcfbf15018e60facd009dcb684bc5bca47b98928125efaa821` then click **CONTINUE** at the bottom. In step 6 in the Machine type tab, select n1-standard-8 from the dropdown box. 
+This repository contains several notebook files which serve as metagenomics analysis of biofilm microbiome workflow tutorials.
 
-After creating your Vertex AI notebook from custom Docker image metagenomic-pipeline:
-- Open Jupyter Lab
-- Open the terminal: Ctrl + Shift + L -> Other -> Terminal
-- Clone the our repo using the command `git clone https://github.com/NIGMS/Metagenomics-Analysis-of-Biofilm-Microbiome.git`
+The below steps guide you through setting up a notebook instance on Amazon SageMaker AI, downloading our tutorial files, and running those files. 
+
+Accordingly, before starting, make sure you have an Amazon account and have access to it.
+
+Once you have these, you can begin by first navigating to https://aws.amazon.com/ and logging in with your credentials. Then, in the top left of the screen, search for 'SageMaker AI'.
+
+This tutorial will cost you less than $10.00 assuming a ml.m5.xlarge notebook instance (except running submodule 5 which is costly), and assuming you delete the notebook and the storage bucket after you finish the tutorial.
+
+### Creating a notebook instance 
+
+Follow the steps highlighted [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateAWSSagemakerNotebooks.md) to create a new notebook instance in Amazon SageMaker. 
+
+### Notebook Creation:
+
++ In step 4, select ml.m5.xlarge from the dropdown box as the notebook instance type and be especially careful to **enable idle shutdown**.
+
++ In step 7, after creating a notebook instance and being in JupyterLab screen you will need to download the module content. The easiest way to do this is to clone the repository directly for the NIGMS Github. This can be done by clicking on git symbol in your JupyterLab environment and pasting the following URL `https://github.com/NIGMS/Metagenomics-Analysis-of-Biofilm-Microbiome.git`. This should download our repo, and the tutorial files inside, into a folder called 'Metagenomics-Analysis-of-Biofilm-Microbiome'.
+
++ When you are finished running code, stop your notebook to prevent unneeded billing as illustrated in step 9.
+
+### Notebook Creation for submodule 5 (Optional):
+
++ In step 4, select ml.m5.12xlarge from the dropdown box as the notebook instance type and increase the volume size to 300 GB. Be especially careful to **enable idle shutdown**.
 
 ## **Architecture Design**
 
-The image below describes the cloud implementation of our analytic workflow. We will download sequence datasets and databases to our Vertex AI virtual machine, use custom kernels to run the analysis, then copy the outputs to a Cloud Storage bucket.
-
-![technical infrastructure diagram](../images/Architecture_Diagram_GCP.png)
+The image below describes the cloud implementation of our analytic workflow. We will download sequence datasets and databases to our SageMaker AI notebook, use the tools to run the analysis, then copy the outputs to an Amazon S3 bucket.
+<p align="center">
+  <img src="../images/Architecture_Diagram-aws.png" />
+</p>
