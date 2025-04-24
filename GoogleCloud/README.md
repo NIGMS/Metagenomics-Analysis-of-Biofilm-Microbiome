@@ -22,7 +22,7 @@ This tutorial will cost you less than $10.00 assuming a n1-standard-4 machine (e
 
 * **Python Kernel:** Follow the steps highlighted [here](https://github.com/NIGMS/NIGMS-Sandbox/blob/main/docs/HowToCreateVertexAINotebooks.md) to create a new notebook instance in Vertex AI. Follow steps 1-8 and be especially careful to enable idle shutdown as highlighted in step 8. In step 7 in the Machine type tab, select n1-standard-4 from the dropdown box.
 
-To clone this repository, use the Git command `git clone https://github.com/NIGMS/RNA-Seq-Differential-Expression-Analysis.git` in the dropdown menu option in Jupyter notebook. Please make sure you only enter the link for the repository that you want to clone. There are other bioinformatics related learning modules available in the [NIGMS Repository](https://github.com/NIGMS). This should download our repo, and the tutorial files inside, into a folder called 'RNA-Seq-Differential-Expression-Analysis'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
+To clone this repository, use the Git command `https://github.com/NIGMS/Metagenomics-Analysis-of-Biofilm-Microbiome.git` in the dropdown menu option in Jupyter notebook. Please make sure you only enter the link for the repository that you want to clone. There are other bioinformatics related learning modules available in the [NIGMS Repository](https://github.com/NIGMS). This should download our repo, and the tutorial files inside, into a folder called 'Metagenomics-Analysis-of-Biofilm-Microbiome'. Double click this folder now. Inside you will find all our tutorial files, which you can double click and run.
 
 
 ### Creating a user managed notebook for submodule 5 (Optional): 
