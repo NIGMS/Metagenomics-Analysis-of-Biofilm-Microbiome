@@ -43,3 +43,22 @@ The image below describes the cloud implementation of our analytic workflow. We 
 <p align="center">
   <img src="../images/Architecture_Diagram-gcp.png" />
 </p>
+
+## Gemini (Optional)
+
+Generative AI is available for this tutorial in the form of Gemini if you would like to use it. To run it, please reference Submodule 1, or run the following code within a submodule notebook.
+
+```!pip install -q google-generativeai google-cloud-secret-manager
+!pip install -q git+https://github.com/NIGMS/NIGMS-Sandbox-Repository-Template.git#subdirectory=llm_integrations
+!pip install -q ipywidgets
+
+import sys
+import os
+util_path = os.path.join(os.getcwd(), 'util')
+if util_path not in sys.path:
+    sys.path.append(util_path)
+
+from gemini import run_gemini_widget, create_gemini_chat_widget 
+from IPython.display import display
+
+run_gemini_widget()
