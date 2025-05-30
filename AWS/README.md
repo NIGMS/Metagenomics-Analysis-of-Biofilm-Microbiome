@@ -40,3 +40,20 @@ The image below describes the cloud implementation of our analytic workflow. We 
 <p align="center">
   <img src="../images/Architecture_Diagram-aws.png" />
 </p>
+
+## AWS Bedrock (Optional)
+
+Generative AI is available for this tutorial if you would like to use it. To run it, please reference Submodule00, or run the following code within a submodule notebook.
+
+```!pip install -q ipywidgets
+import sys
+import os
+util_path = os.path.join(os.getcwd(), 'util')
+if util_path not in sys.path:
+    sys.path.append(util_path)
+
+# Import the display_widgets function from your Python file
+from genai import display_widgets
+
+# Call the function to display the widgets
+display_widgets()
