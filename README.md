@@ -1,6 +1,9 @@
-![course-card](images/USD-course-card-2.png)
-
 # University of South Dakota Analysis of Microbial Community and Biofilms 
+
+<br>
+<p align="center">
+    <img src="images/USD-course-card-2.png" width="400" />
+</p>
 
 ## Contents
 
